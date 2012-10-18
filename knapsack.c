@@ -14,6 +14,12 @@ int knapSack(int W, int wt[], int val[], int n){
       	K[i][w] = K[i-1][w];
     }
   }
+  for (i = 0; i <= n; i++){
+    for (w = 0; w <= W; w++){
+      printf("%d\t", K[i][w]);
+    }
+    printf("\n");
+  }
   return K[n][W];
 }
  
@@ -21,7 +27,7 @@ int main(){
   int i, n, val[100], wt[100], W;
   printf("Number of items: ");
   scanf("%d", &n);
-  printf("Maximum Value to be taken: ");
+  printf("Maximum Weight: ");
   scanf("%d", &W);
   printf("Enter %d Values: ", n);
   for(i = 0; i < n; i++)
