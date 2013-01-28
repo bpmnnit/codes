@@ -6,6 +6,7 @@ def main():
   num_factors = 1
   i = 2
   while i * i <= initial_n:
+    print i
     power = 0
     while n % i == 0:
       n /= i
